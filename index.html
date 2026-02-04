@@ -22,21 +22,38 @@
 
 <body class="inter flex flex-col justify-center items-center min-h-screen bg-off-white">
 
-  <div class="px-4 md:pt-4 pt-6 md:pb-0 pb-22 text-very-dark-blue md:max-w-6xl max-w-xl max-h-screen relative">
+  <div class="fixed inset-0 bg-black/50 z-10 transition-opacity hidden" id="overlay"></div>
 
-    <header class="flex justify-between items-center md:pb-7 pb-6">
+  <div
+    class="px-4 md:pt-4 pt-6 md:pb-0 pb-22 text-very-dark-blue md:max-w-6xl max-w-xl max-h-screen relative">
+
+    <header class="flex justify-between items-center md:pb-7 pb-6 ">
       <div class="md:size-14 size-11 h-fit flex flex-col items-center">
         <img src="/assets/images/logo.svg" alt="website logo" class="object-contain">
       </div>
-      <button id="hamburger" aria-expanded="false" aria-label="menu" class="md:hidden block hover:cursor-pointer z-20"><i
-          class="fa-solid fa-bars text-2xl" id="menu-icon"></i></button>
-      <div class="md:bg-transparent bg-white md:static absolute top-0 -right-80 transition-all duration-500 ease-in-out z-10 md:min-h-fit min-h-screen flex flex-col md:p-0 py-40 pr-30 pl-10" id="nav">
-        <nav class="flex md:text-dark-grayish-blue md:flex-row flex-col md:gap-8 gap-6 text-xl md:items-center items-start">
-          <span>Home</span>
-          <span>New</span>
-          <span>Popular</span>
-          <span>Trending</span>
-          <span>Categories</span>
+      <button id="hamburger" aria-expanded="false" aria-label="menu"
+        class="md:hidden block hover:cursor-pointer z-20"><i class="fa-solid fa-bars text-2xl"
+          id="menu-icon"></i></button>
+      <div
+        class="md:bg-transparent bg-off-white md:static fixed md:translate-x-0 translate-x-full top-0 transform transition-transform right-0 duration-500 ease-in-out z-10 md:min-h-fit min-h-screen md:pointer-events-auto pointer-events-none flex flex-col md:p-0 py-40 pr-30 pl-10"
+        id="nav">
+        <!-- mobile -->
+        <nav
+          class="nav md:hidden flex" id="nav-mobile" aria-hidden="true" inert>
+          <span><a href="#">Home</a></span>
+          <span><a href="#">New</a></span>
+          <span><a href="#">Popular</a></span>
+          <span><a href="#">Trending</a></span>
+          <span><a href="#">Categories</a></span>
+        </nav>
+        <!-- desktop -->
+        <nav
+          class="nav md:flex hidden">
+          <span><a href="#">Home</a></span>
+          <span><a href="#">New</a></span>
+          <span><a href="#">Popular</a></span>
+          <span><a href="#">Trending</a></span>
+          <span><a href="#">Categories</a></span>
         </nav>
       </div>
     </header>

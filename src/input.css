@@ -52,16 +52,20 @@
     .preview {
         @apply flex gap-6 items-start;
     }
-
+    
     .preview h3 {
         @apply hover:text-soft-red hover:cursor-pointer;
     }
-
+    
     .preview-img {
         @apply md:w-30 w-25 h-full flex-none;
     }
-
+    
     .new h3 {
         @apply hover:cursor-pointer hover:text-soft-orange;
+    }
+    
+    .nav {
+        @apply md:text-dark-grayish-blue md:flex-row flex-col md:gap-8 gap-6 text-xl md:items-center items-start;
     }
 }

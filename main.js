@@ -36,18 +36,12 @@ const handleToggle = () => {
 
         overlay.classList.remove("hidden")
 
-
-        // nav.classList.remove("hidden")
-        // nav.classList.add("flex")
         nav.classList.remove('translate-x-full');
         nav.classList.add("pointer-events-auto");
         nav.classList.remove("pointer-events-none");
 
         menuIcon.classList.add("fa-close");
         menuIcon.classList.remove("fa-bars");
-
-        // nav.classList.add("right-0")
-        // nav.classList.removes("-right-20")
 
         setInert(mobileNav, false);
 
@@ -59,14 +53,9 @@ const handleToggle = () => {
 
         overlay.classList.add("hidden")
 
-        // nav.classList.add("hidden")
-        // nav.classList.remove("flex")
         nav.classList.add("translate-x-full")
         nav.classList.remove("pointer-events-auto");
         nav.classList.add("pointer-events-none");
-
-        // nav.classList.remove("right-0")
-        // nav.classList.add("-right-20")
 
         menuIcon.classList.remove("fa-close");
         menuIcon.classList.add("fa-bars");

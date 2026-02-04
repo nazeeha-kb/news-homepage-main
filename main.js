@@ -6,7 +6,7 @@ const mobileNav = document.getElementById("nav-mobile")
 
 
 hamburger.addEventListener("click", () => {
-    handleToggle();
+  handleToggle();
 })
 
 // Set inert when menu not visible to prevent the tab from accessing the links, and only make accessible when visible.
@@ -29,40 +29,38 @@ const setInert = (el, inert) => {
 
 
 const handleToggle = () => {
-    if (hamburger.getAttribute("aria-expanded") == "false") {
+  if (hamburger.getAttribute("aria-expanded") == "false") {
 
-        hamburger.setAttribute("aria-expanded", true)
-        mobileNav.setAttribute("aria-hidden", "false");
+    hamburger.setAttribute("aria-expanded", true)
 
-        overlay.classList.remove("hidden")
+    overlay.classList.remove("hidden")
 
-        nav.classList.remove('translate-x-full');
-        nav.classList.add("pointer-events-auto");
-        nav.classList.remove("pointer-events-none");
+    nav.classList.remove('translate-x-full');
+    nav.classList.add("pointer-events-auto");
+    nav.classList.remove("pointer-events-none");
 
-        menuIcon.classList.add("fa-close");
-        menuIcon.classList.remove("fa-bars");
+    menuIcon.classList.add("fa-close");
+    menuIcon.classList.remove("fa-bars");
 
-        setInert(mobileNav, false);
+    setInert(mobileNav, false);
 
-        console.log('expanded')
-    }
-    else {
-        hamburger.setAttribute("aria-expanded", false)
-        mobileNav.setAttribute("aria-hidden", "true");
+    console.log('expanded')
+  }
+  else {
+    hamburger.setAttribute("aria-expanded", false)
 
-        overlay.classList.add("hidden")
+    overlay.classList.add("hidden")
 
-        nav.classList.add("translate-x-full")
-        nav.classList.remove("pointer-events-auto");
-        nav.classList.add("pointer-events-none");
+    nav.classList.add("translate-x-full")
+    nav.classList.remove("pointer-events-auto");
+    nav.classList.add("pointer-events-none");
 
-        menuIcon.classList.remove("fa-close");
-        menuIcon.classList.add("fa-bars");
+    menuIcon.classList.remove("fa-close");
+    menuIcon.classList.add("fa-bars");
 
-        setInert(mobileNav, true);
+    setInert(mobileNav, true);
 
-        console.log('hidden')
+    console.log('hidden')
 
-    }
+  }
 }

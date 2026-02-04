@@ -42,14 +42,26 @@
     hr {
         @apply text-dark-grayish-blue;
     }
+
+    nav span {
+        @apply hover:text-soft-red hover:cursor-pointer
+    }
 }
 
 @layer components {
     .preview {
-        @apply flex gap-6 items-center;
+        @apply flex gap-6 items-start;
+    }
+
+    .preview h3 {
+        @apply hover:text-soft-red hover:cursor-pointer;
     }
 
     .preview-img {
-        @apply w-25 flex-none;
+        @apply md:w-30 w-25 h-full flex-none;
+    }
+
+    .new h3 {
+        @apply hover:cursor-pointer hover:text-soft-orange;
     }
 }

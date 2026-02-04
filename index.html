@@ -20,38 +20,53 @@
   <title>Frontend Mentor | News homepage</title>
 </head>
 
-<body class="inter flex flex-col justify-center items-center">
-  <div class="px-4 pt-6 md:pb-0 pb-22 text-very-dark-blue max-w-7xl max-h-screen">
-    <header class="flex justify-between items-center pb-6">
-      <div class="size-11 h-fit flex flex-col items-center">
+<body class="inter flex flex-col justify-center items-center min-h-screen bg-off-white">
+
+  <div class="px-4 md:pt-4 pt-6 md:pb-0 pb-22 text-very-dark-blue md:max-w-6xl max-w-xl max-h-screen relative">
+
+    <header class="flex justify-between items-center md:pb-7 pb-6">
+      <div class="md:size-14 size-11 h-fit flex flex-col items-center">
         <img src="/assets/images/logo.svg" alt="website logo" class="object-contain">
       </div>
-      <i class="fa-solid fa-bars text-xl"></i>
-      <nav class="hidden">
-        Home
-        New
-        Popular
-        Trending
-        Categories
-      </nav>
+      <button id="hamburger" aria-expanded="false" aria-label="menu" class="md:hidden block hover:cursor-pointer z-20"><i
+          class="fa-solid fa-bars text-2xl" id="menu-icon"></i></button>
+      <div class="md:bg-transparent bg-white md:static absolute top-0 -right-80 transition-all duration-500 ease-in-out z-10 md:min-h-fit min-h-screen flex flex-col md:p-0 py-40 pr-30 pl-10" id="nav">
+        <nav class="flex md:text-dark-grayish-blue md:flex-row flex-col md:gap-8 gap-6 text-xl md:items-center items-start">
+          <span>Home</span>
+          <span>New</span>
+          <span>Popular</span>
+          <span>Trending</span>
+          <span>Categories</span>
+        </nav>
+      </div>
     </header>
 
-    <main class="grid gap-18 md:grid-rows-2 md:grid-cols-2 items-start h-fit">
-      <article class="space-y-6">
-        <img src="/assets/images/image-web-3-mobile.jpg" alt="graphic of bright colored elements" class="md:hidden block">
-        <img src="/assets/images/image-web-3-desktop.jpg" alt="graphic of bright colored elements" class="md:block hidden">
-        <h1 class="font-extrabold text-5xl">The Bright Future of Web 3.0?</h1>
-        <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
-          of
-          the
-          people.
-          But is it really fulfilling its promise?</p>
-        <button class="hover:cursor-pointer bg-soft-red py-3 px-8 font-bold text-para tracking-[0.2em]">READ
-          MORE</button>
+    <main class="grid md:gap-8 gap-18 md:grid-cols-3 items-start">
+
+      <article class="space-y-6 md:col-span-2">
+        <img src="/assets/images/image-web-3-mobile.jpg" alt="graphic of bright colored elements"
+          class="md:hidden block">
+        <img src="/assets/images/image-web-3-desktop.jpg" alt="graphic of bright colored elements"
+          class="md:block hidden">
+        <div class="flex lg:flex-row flex-col lg:gap-16 md:gap-8 gap-6">
+          <h1 class="font-extrabold lg:w-2xl text-5xl">The Bright Future of Web 3.0?</h1>
+          <div class="space-y-6 md:space-y-8 md:w-3xl">
+            <p class="max-w-lg">We dive into the next evolution of the web that claims to put the power of the platforms
+              back into the
+              hands
+              of
+              the
+              people.
+              But is it really fulfilling its promise?</p>
+            <button
+              class="hover:cursor-pointer bg-soft-red py-3 px-8 font-bold text-para tracking-[0.2em] hover:bg-very-dark-blue hover:text-white">READ
+              MORE</button>
+          </div>
+        </div>
       </article>
 
 
-      <article class="bg-very-dark-blue text-white px-5 py-6 space-y-8">
+      <article class="bg-very-dark-blue text-white px-5 py-6 space-y-8 new">
         <h2 class="text-soft-orange font-bold">New</h2>
         <div class="flex flex-col gap-2">
           <h3 class="">Hydrogen VS Electric Cars</h3>
@@ -71,12 +86,13 @@
       </article>
 
 
-      <article class="md:col-span-2 flex md:flex-row flex-col gap-8 h-fit">
+      <article class="md:col-span-3 md:pt-2 flex md:flex-row flex-col md:gap-4 gap-8">
         <div class="preview">
           <div class="preview-img">
-            <img src="/assets/images/image-retro-pcs.jpg" alt="image of computer, keyboard and tapes in retro style" class="object-cover w-full h-full">
+            <img src="/assets/images/image-retro-pcs.jpg" alt="image of computer, keyboard and tapes in retro style"
+              class="object-cover w-full h-full">
           </div>
-          <div class="space-y-2">
+          <div class="md:space-y-1 space-y-2">
             <h2 class="text-soft-red">01</h2>
             <h3>Reviving Retro PCs</h3>
             <p>What happens when old PCs are given modern upgrades?</p>
@@ -85,9 +101,10 @@
 
         <div class="preview">
           <div class="preview-img">
-            <img src="/assets/images/image-top-laptops.jpg" alt="Image of a backlit keyboard keys" class="object-cover w-full h-full">
+            <img src="/assets/images/image-top-laptops.jpg" alt="Image of a backlit keyboard keys"
+              class="object-cover w-full h-full">
           </div>
-          <div class="space-y-2">
+          <div class="md:space-y-1 space-y-2">
             <h2 class="text-soft-red">02</h2>
             <h3>Top 10 Laptops of 2022</h3>
             <p>Our best picks for various needs and budgets.</p>
@@ -96,9 +113,10 @@
         </div>
         <div class="preview">
           <div class="preview-img">
-            <img src="/assets/images/image-gaming-growth.jpg" alt="Image of a gaming controller" class="object-cover w-full h-full">
+            <img src="/assets/images/image-gaming-growth.jpg" alt="Image of a gaming controller"
+              class="object-cover w-full h-full">
           </div>
-          <div class="space-y-2">
+          <div class="md:space-y-1 space-y-2">
             <h2 class="text-soft-red">03</h2>
             <h3>The Growth of Gaming</h3>
             <p>How the pandemic has sparked fresh opportunities.</p>

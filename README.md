@@ -17,7 +17,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://vercel.com/nazeehas-projects/news-homepage-main)
+- Live Site URL: [Add live site URL here](https://news-homepage-main-gray-nu.vercel.app/)
 
 ## My process
 

@@ -43,7 +43,7 @@
         @apply text-dark-grayish-blue;
     }
 
-    nav span {
+    nav li {
         @apply hover:text-soft-red hover:cursor-pointer
     }
 }
